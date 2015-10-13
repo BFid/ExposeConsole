@@ -56,6 +56,7 @@ int main(void) {
 		iprintf("y=%04X,%04X", touchXY.rawy, touchXY.py);
 		if ((touchXY.px>0x90)&&(touchXY.px!=0x00)) iprintf("\x1b[6;14H -->");
 		if ((touchXY.px<0x90)&&(touchXY.px!=0x00)) iprintf("\x1b[6;14H <--");
+		if ((touchXY.px==0x00)&&(touchXY.py==0x00)) iprintf("\x1b[6;14H    ");
 		testInput ();
 	}
 	return 0;
